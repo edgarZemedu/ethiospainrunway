@@ -744,7 +744,7 @@ section { padding: 100px 0; }
   flex-direction: column;
   justify-content: center;
   padding: 60px;
-  background: var(--deep-green);
+  background: var(--mid-green);
 }
 .gastro-content p {
   font-size: 15px;
@@ -860,8 +860,8 @@ section { padding: 100px 0; }
   justify-content: center;
   align-items: center;
   padding: 12px 18px;
-  background: var(--warm-white);
-  opacity: 1;
+  background: rgba(245, 240, 232, 0.9);
+  opacity: 0.96;
   transition: opacity 0.3s;
 }
 .partner-logo:hover { opacity: 1; }
