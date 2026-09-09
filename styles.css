@@ -79,6 +79,11 @@ nav.scrolled {
   flex-direction: column;
   line-height: 1;
 }
+.nav-logo-image {
+  display: block;
+  width: 150px;
+  height: auto;
+}
 .nav-logo-top {
   font-family: var(--font-body);
   font-size: 9px;
@@ -192,7 +197,7 @@ nav.scrolled {
 .hero-panel:hover img { transform: scale(1.04); }
 .hero-panel-label {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -226,7 +231,7 @@ nav.scrolled {
 }
 .hero-center {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -359,7 +364,7 @@ section { padding: 100px 0; }
 .section-title.light em { color: var(--gold-light); }
 
 /* ===== ABOUT SECTION ===== */
-#about { background: var(--warm-white); }
+#about { background: #ffffff; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -551,7 +556,7 @@ section { padding: 100px 0; }
 }
 
 /* ===== FASHION SECTION ===== */
-#fashion { background: var(--cream); }
+#fashion { background: #ffffff; }
 .fashion-intro {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -571,7 +576,7 @@ section { padding: 100px 0; }
   gap: 24px;
 }
 .designer-card {
-  background: white;
+  background: transparent;
   overflow: hidden;
   transition: transform 0.4s, box-shadow 0.4s;
   cursor: pointer;
@@ -812,7 +817,7 @@ section { padding: 100px 0; }
 }
 
 /* ===== GUESTS ===== */
-#guests { background: var(--cream); }
+#guests { background: #ffffff; }
 .guests-header {
   display: flex;
   justify-content: flex-start;
@@ -926,7 +931,7 @@ section { padding: 100px 0; }
 
 /* ===== PARTNERS ===== */
 #partners {
-  background: var(--cream);
+  background: #ffffff;
   padding: 70px 0;
 }
 .partners-label {
@@ -971,12 +976,14 @@ section { padding: 100px 0; }
   filter: contrast(1.15);
 }
 .partner-logo-afwe,
-.partner-logo-black-excellence {
+.partner-logo-black-excellence,
+.partner-logo-atlantica {
   width: 240px;
   height: 100px;
 }
 .partner-logo-afwe img,
-.partner-logo-black-excellence img {
+.partner-logo-black-excellence img,
+.partner-logo-atlantica img {
   max-height: 88px;
 }
 .partner-text {
@@ -988,7 +995,7 @@ section { padding: 100px 0; }
 }
 
 /* ===== MEDIA ===== */
-#media { background: var(--warm-white); }
+#media { background: #ffffff; }
 .media-section {
   padding: 80px 0;
 }
@@ -1006,6 +1013,13 @@ section { padding: 100px 0; }
   align-items: center;
   margin-top: 50px;
 }
+.media-logo-item {
+  display: flex;
+  min-width: 150px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
 .media-logo {
   font-family: var(--font-body);
   font-size: 13px;
@@ -1014,6 +1028,11 @@ section { padding: 100px 0; }
   text-transform: uppercase;
   color: var(--text-muted);
   transition: color 0.3s;
+}
+.media-logo-image {
+  width: 260px;
+  height: 176px;
+  object-fit: contain;
 }
 .media-logo:hover { color: var(--deep-green); }
 
@@ -1097,7 +1116,7 @@ section { padding: 100px 0; }
 
 /* ===== CONTACT / CTA ===== */
 #contact {
-  background: var(--charcoal);
+  background: var(--deep-green);
   text-align: center;
   padding: 120px 0;
 }
@@ -1112,7 +1131,7 @@ section { padding: 100px 0; }
 }
 .contact-title {
   font-family: var(--font-display);
-  font-size: clamp(42px, 6vw, 88px);
+  font-size: clamp(28px, 4vw, 59px);
   font-weight: 300;
   color: white;
   letter-spacing: 0.04em;
@@ -1184,8 +1203,8 @@ section { padding: 100px 0; }
 
 /* ===== FOOTER ===== */
 footer {
-  background: #0a1f1a;
-  color: rgba(245,240,232,0.5);
+  background: #000000;
+  color: #ffffff;
   padding: 60px 0 30px;
 }
 .footer-grid {
@@ -1198,6 +1217,12 @@ footer {
   font-size: 30px;
   margin-bottom: 16px;
   display: block;
+}
+.footer-logo-image {
+  display: block;
+  width: 190px;
+  height: auto;
+  margin-bottom: 16px;
 }
 .footer-brand p {
   font-size: 12px;
@@ -1240,14 +1265,26 @@ footer {
 }
 .social-links {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 16px;
 }
 .social-links a {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(245,240,232,0.4);
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.7);
   transition: color 0.3s;
+}
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .social-links a:hover { color: var(--gold-light); }
 
