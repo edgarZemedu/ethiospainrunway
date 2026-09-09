@@ -52,7 +52,6 @@ git push origin main
 - 🇪🇸 Español (ES)
 - 🇬🇧 English (EN)
 - 🇫🇷 Français (FR)
-- 🇮🇹 Italiano (IT)
 - 🇪🇹 Amhárico (አማ)
 
 ## ✨ Secciones incluidas
@@ -69,6 +68,6 @@ git push origin main
 - **Contacto** — CTA final
 
 ## 📞 Contacto del proyecto
-- Mitiku Marcos Lillo
-- mitiku.marketing@gmail.com
+- EQUIPO DE ETHIOSPAIN RUNWAY
+- press.ethiospain@gmail.com
 - +34 692 40 36 91
