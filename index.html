@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ethio-Spain Runway — Evento Intercultural Hispano-Etíope</title>
-  <meta name="description" content="Ethio-Spain Runway: donde la moda, la cultura y la gastronomía de España y Etiopía se encuentran. Madrid, Octubre 2026." />
+  <meta name="description" content="Ethio-Spain Runway: donde la moda, la cultura y la gastronomía de España y Etiopía se encuentran." />
+  <link rel="icon" type="image/jpeg" href="assets/logos/our%20logo/Ethio%20Spain%20Runway%20White%20BG.jpg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +35,7 @@
       <li><a href="#fashion" data-i18n="nav.fashion">Moda</a></li>
       <li><a href="#gastronomy" data-i18n="nav.gastronomy">Gastronomía</a></li>
       <li><a href="#guests" data-i18n="nav.guests">Invitados</a></li>
-      <li><a href="#ngo" data-i18n="nav.ngo">ONG Abay</a></li>
+      <li><a class="abay-popup-link" href="abay.html" target="_blank" rel="noopener" data-i18n="nav.ngo">ONG Abay</a></li>
     </ul>
     <a href="#contact" class="nav-cta" data-i18n="nav.cta">CONTACTAR</a>
     <button class="hamburger" id="hamburger-btn" aria-label="Menú">
@@ -49,6 +50,7 @@
     <a href="#fashion" onclick="closeMobileMenu()" data-i18n="nav.fashion">Moda</a>
     <a href="#gastronomy" onclick="closeMobileMenu()" data-i18n="nav.gastronomy">Gastronomía</a>
     <a href="#guests" onclick="closeMobileMenu()" data-i18n="nav.guests">Invitados</a>
+    <a class="abay-popup-link" href="abay.html" target="_blank" rel="noopener" onclick="closeMobileMenu()" data-i18n="nav.ngo">ONG Abay</a>
     <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav.cta">Asistir</a>
   </div>
 
@@ -57,31 +59,13 @@
     <div class="hero-bg"></div>
     <div class="hero-split">
       <div class="hero-panel">
-        <img src="assets/TRADICION ETIOPE.jpg" alt="Tradición etíope" loading="eager" />
-        <div class="hero-panel-label">
-          <span data-i18n="hero.label.ethiopia">Etiopía</span>
-          <h2>ኢትዮጵያ</h2>
-        </div>
-      </div>
-      <div class="hero-panel">
-        <img src="assets/modelos/maria-jose-ortiz-disenadora-1.jpg" alt="Moda española" loading="eager" />
-        <div class="hero-panel-label">
-          <span data-i18n="hero.label.spain">España</span>
-          <h2>España</h2>
-        </div>
+        <img src="assets/modelos/maria-jose-ortiz-disenadora-1.jpg" alt="María José Ortiz, diseñadora de moda española" loading="eager" />
       </div>
     </div>
-    <div class="hero-divider"></div>
     <div class="hero-center">
-      <p class="hero-center-eyebrow" data-i18n="hero.eyebrow">Evento Intercultural · Madrid 2026</p>
+      <p class="hero-center-eyebrow" data-i18n="hero.eyebrow">Evento Intercultural · Madrid</p>
       <h1 class="hero-center-title">Ethio · Spain<br><em>Runway</em></h1>
       <p class="hero-center-sub" data-i18n="hero.sub">Moda · Cultura · Gastronomía</p>
-    </div>
-    <div class="hero-bottom">
-      <div class="hero-date-badge">
-        <span class="day">22 – 24</span>
-        <span class="month" data-i18n="hero.month">Octubre 2026 · Madrid</span>
-      </div>
     </div>
   </section>
 
@@ -242,9 +226,7 @@
           <div class="program-days program-days-spaced">
             <div class="program-day active reveal">
               <div class="program-day-header">
-                <span class="program-day-num">22</span>
                 <div class="program-day-name">
-                  <span class="weekday" data-i18n="prog.day1.weekday">Jueves · Octubre</span>
                   <span class="title" data-i18n="prog.day1.title">Cocktail Inaugural</span>
                 </div>
               </div>
@@ -265,9 +247,7 @@
             </div>
             <div class="program-day reveal reveal-delay-1">
               <div class="program-day-header">
-                <span class="program-day-num">23</span>
                 <div class="program-day-name">
-                  <span class="weekday" data-i18n="prog.day2.weekday">Viernes · Octubre</span>
                   <span class="title" data-i18n="prog.day2.title">Gala Intercultural</span>
                 </div>
               </div>
@@ -288,9 +268,7 @@
             </div>
             <div class="program-day reveal reveal-delay-2">
               <div class="program-day-header">
-                <span class="program-day-num">24</span>
                 <div class="program-day-name">
-                  <span class="weekday" data-i18n="prog.day3.weekday">Sábado · Octubre</span>
                   <span class="title" data-i18n="prog.day3.title">Visitas Guiadas</span>
                 </div>
               </div>
@@ -396,33 +374,6 @@
     </div>
   </section>
 
-  <!-- NGO ABAY -->
-  <section id="ngo">
-    <div class="container">
-      <div class="ngo-grid">
-        <div class="ngo-content">
-          <p class="section-tag" data-i18n="ngo.tag">Acción Social</p>
-          <h2 class="section-title light reveal" data-i18n="ngo.title">ONG Abay<br><em>Etiopía</em></h2>
-          <p class="reveal" data-i18n="ngo.text1">Este evento intercultural tiene como objetivo dar visibilidad a la ONG Abay Etiopía, reconocida de utilidad pública, y celebrar la unión entre España y Etiopía poniendo en valor los proyectos educativos y de desarrollo que se llevan a cabo en el país.</p>
-          <p class="reveal" data-i18n="ngo.text2">Abay es una ONG española fundada en 2009 que trabaja en Etiopía combatiendo la pobreza mediante proyectos de educación, sanidad y desarrollo comunitario en Walmara y Addis Abeba.</p>
-          <div class="ngo-programs reveal">
-            <span class="ngo-program" data-i18n="ngo.p1">Educación</span>
-            <span class="ngo-program" data-i18n="ngo.p2">Salud</span>
-            <span class="ngo-program" data-i18n="ngo.p3">Desarrollo Comunitario</span>
-          </div>
-          <p class="ngo-website">
-            <a href="https://www.abayetiopia.org" target="_blank">www.abayetiopia.org</a>
-          </p>
-        </div>
-        <div class="ngo-visual reveal reveal-delay-2">
-          <img src="assets/abay/abay-2987.jpg" alt="Proyecto educativo de Abay Etiopía" />
-          <img src="assets/abay/abay-2694.jpg" alt="Familia beneficiaria de Abay Etiopía" />
-          <img src="assets/abay/abay-2993.jpg" alt="Comunidad infantil de Abay Etiopía" />
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- PARTNERS -->
   <section id="partners">
     <div class="container">
@@ -496,7 +447,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img class="footer-logo-image" src="assets/logos/our logo/Ethio Spain Runway White Transparent.png" alt="Ethio-Spain Runway" />
-          <p data-i18n="footer.tagline">Donde la moda, la cultura y la gastronomía de España y Etiopía se encuentran. Madrid, Octubre 2026.</p>
+          <p data-i18n="footer.tagline">Donde la moda, la cultura y la gastronomía de España y Etiopía se encuentran.</p>
         </div>
         <div>
           <p class="footer-col-title" data-i18n="footer.col1">Navegación</p>

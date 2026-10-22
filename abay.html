@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONG Abay Etiopía — Ethio-Spain Runway</title>
+  <meta name="description" content="Conoce la labor de la ONG Abay Etiopía y sus proyectos de educación, salud y desarrollo comunitario." />
+  <link rel="icon" type="image/jpeg" href="assets/logos/our%20logo/Ethio%20Spain%20Runway%20White%20BG.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="abay-popup-page">
+  <div id="lang-bar">
+    <button class="lang-btn active" data-lang="es" onclick="setLang('es', this)">ES</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en', this)">EN</button>
+    <button class="lang-btn" data-lang="am" onclick="setLang('am', this)">አማ</button>
+    <button class="lang-btn" data-lang="fr" onclick="setLang('fr', this)">FR</button>
+    <button class="lang-btn abay-popup-close" type="button" onclick="window.close()" data-i18n="popup.close">Cerrar</button>
+  </div>
+
+  <main>
+    <section id="ngo">
+      <div class="container">
+        <div class="ngo-grid">
+          <div class="ngo-content">
+            <p class="section-tag" data-i18n="ngo.tag">Acción Social</p>
+            <h1 class="section-title light" data-i18n="ngo.title">ONG Abay<br><em>Etiopía</em></h1>
+            <p data-i18n="ngo.text1">Este evento intercultural tiene como objetivo dar visibilidad a la ONG Abay Etiopía, reconocida de utilidad pública, y celebrar la unión entre España y Etiopía poniendo en valor los proyectos educativos y de desarrollo que se llevan a cabo en el país.</p>
+            <p data-i18n="ngo.text2">Abay es una ONG española fundada en 2009 que trabaja en Etiopía combatiendo la pobreza mediante proyectos de educación, sanidad y desarrollo comunitario en Walmara y Addis Abeba.</p>
+            <div class="ngo-programs">
+              <span class="ngo-program" data-i18n="ngo.p1">Educación</span>
+              <span class="ngo-program" data-i18n="ngo.p2">Salud</span>
+              <span class="ngo-program" data-i18n="ngo.p3">Desarrollo Comunitario</span>
+            </div>
+            <p class="ngo-website">
+              <a href="https://www.abayetiopia.org" target="_blank" rel="noopener noreferrer">www.abayetiopia.org</a>
+            </p>
+          </div>
+          <div class="ngo-visual">
+            <img src="assets/abay/abay-2987.jpg" alt="Proyecto educativo de Abay Etiopía" />
+            <img src="assets/abay/abay-2694.jpg" alt="Familia beneficiaria de Abay Etiopía" />
+            <img src="assets/abay/abay-2993.jpg" alt="Comunidad infantil de Abay Etiopía" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="translations.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

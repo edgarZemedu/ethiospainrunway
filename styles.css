@@ -181,7 +181,7 @@ nav.scrolled {
   position: absolute;
   inset: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 .hero-panel {
   position: relative;
@@ -221,19 +221,11 @@ nav.scrolled {
   letter-spacing: 0.06em;
   line-height: 1;
 }
-.hero-divider {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
-  z-index: 2;
-}
 .hero-center {
   position: absolute;
-  top: 56%;
+  bottom: 8%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 3;
   text-align: center;
   background: rgba(13,43,36,0.85);
@@ -271,36 +263,6 @@ nav.scrolled {
   color: rgba(245,240,232,0.7);
   text-transform: uppercase;
   margin-top: 10px;
-}
-.hero-bottom {
-  position: relative;
-  z-index: 4;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 50px 50px;
-}
-.hero-date-badge {
-  display: none;
-  flex-direction: column;
-  border-left: 2px solid var(--gold);
-  padding-left: 16px;
-}
-.hero-date-badge .day {
-  font-family: var(--font-display);
-  font-size: 52px;
-  font-weight: 300;
-  color: white;
-  line-height: 1;
-}
-.hero-date-badge .month {
-  font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  color: var(--gold-light);
-  text-transform: uppercase;
 }
 .hero-scroll {
   display: flex;
@@ -672,23 +634,9 @@ section { padding: 100px 0; }
   gap: 16px;
   margin-bottom: 14px;
 }
-.program-day-num {
-  font-family: var(--font-display);
-  font-size: 52px;
-  font-weight: 300;
-  color: var(--gold);
-  line-height: 1;
-}
 .program-day-name {
   display: flex;
   flex-direction: column;
-}
-.program-day-name .weekday {
-  font-family: var(--font-body);
-  font-size: 9px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
 }
 .program-day-name .title {
   font-family: var(--font-display);
@@ -1041,6 +989,14 @@ section { padding: 100px 0; }
   background: linear-gradient(135deg, var(--mid-green) 0%, var(--deep-green) 100%);
   color: white;
 }
+.abay-popup-page #ngo {
+  min-height: 100vh;
+  padding-top: 130px;
+}
+.abay-popup-close {
+  margin-left: 12px;
+  border-left: 1px solid rgba(245,240,232,0.25) !important;
+}
 .ngo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1342,10 +1298,6 @@ footer {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .hero-center { padding: 20px 28px; width: 90%; }
-  .hero-bottom { padding: 0 24px 32px; }
-  .hero-split { grid-template-columns: 1fr; }
-  .hero-panel:first-child { display: none; }
-  .hero-divider { display: none; }
   section { padding: 70px 0; }
   .guests-header {
     flex-direction: column;
