@@ -25,11 +25,18 @@ if (abayModal instanceof HTMLDialogElement) {
       event.preventDefault();
       closeMobileMenu();
       abayModal.showModal();
+      document.documentElement.classList.add('modal-open');
+      document.body.classList.add('modal-open');
     });
   });
 
   abayModal.querySelector('.abay-modal-close')?.addEventListener('click', () => {
     abayModal.close();
+  });
+
+  abayModal.addEventListener('close', () => {
+    document.documentElement.classList.remove('modal-open');
+    document.body.classList.remove('modal-open');
   });
 
   abayModal.addEventListener('click', (event) => {

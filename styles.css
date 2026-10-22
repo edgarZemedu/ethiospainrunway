@@ -24,6 +24,10 @@ body {
   color: var(--charcoal);
   overflow-x: hidden;
 }
+html.modal-open,
+body.modal-open {
+  overflow: hidden;
+}
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 
@@ -1068,32 +1072,36 @@ section { padding: 100px 0; }
   color: white;
 }
 #abay-modal {
-  position: relative;
-  width: min(1180px, calc(100% - 32px));
+  position: fixed;
+  inset: 50% auto auto 50%;
+  width: min(900px, calc(100% - 32px));
   max-width: none;
   max-height: calc(100vh - 32px);
-  padding: 0;
+  margin: 0;
+  padding: 16px;
   border: 1px solid var(--border);
   background: var(--deep-green);
   color: white;
-  overflow: auto;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 #abay-modal[open] {
   display: block;
 }
 #abay-modal::backdrop {
-  background: rgba(8, 16, 14, 0.78);
+  background: rgba(8, 16, 14, 0.82);
   backdrop-filter: blur(6px);
 }
 .abay-modal-close {
   position: sticky;
-  top: 12px;
-  z-index: 2;
+  top: 0;
+  z-index: 1;
   display: grid;
   place-items: center;
   width: 40px;
   height: 40px;
-  margin: 12px 12px -52px auto;
+  margin: 0 0 -40px auto;
   border: 1px solid var(--border);
   background: var(--deep-green);
   color: var(--gold-light);
@@ -1102,6 +1110,21 @@ section { padding: 100px 0; }
 }
 .abay-modal-close:hover {
   background: var(--mid-green);
+}
+#abay-modal #ngo {
+  padding: 32px 0;
+}
+#abay-modal .section-title {
+  font-size: clamp(34px, 4vw, 56px);
+}
+#abay-modal .ngo-grid {
+  gap: 32px;
+}
+.ngo-visual {
+  overscroll-behavior: contain;
+}
+.ngo-visual img {
+  max-height: 32vh;
 }
 .ngo-grid {
   display: grid;
