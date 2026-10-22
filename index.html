@@ -35,7 +35,7 @@
       <li><a href="#fashion" data-i18n="nav.fashion">Moda</a></li>
       <li><a href="#gastronomy" data-i18n="nav.gastronomy">Gastronomía</a></li>
       <li><a href="#guests" data-i18n="nav.guests">Invitados</a></li>
-      <li><a class="abay-popup-link" href="abay.html" target="_blank" rel="noopener" data-i18n="nav.ngo">ONG Abay</a></li>
+      <li><a class="abay-modal-link" href="#abay-modal" aria-haspopup="dialog" aria-controls="abay-modal" data-i18n="nav.ngo">ONG Abay</a></li>
     </ul>
     <a href="#contact" class="nav-cta" data-i18n="nav.cta">CONTACTAR</a>
     <button class="hamburger" id="hamburger-btn" aria-label="Menú">
@@ -50,7 +50,7 @@
     <a href="#fashion" onclick="closeMobileMenu()" data-i18n="nav.fashion">Moda</a>
     <a href="#gastronomy" onclick="closeMobileMenu()" data-i18n="nav.gastronomy">Gastronomía</a>
     <a href="#guests" onclick="closeMobileMenu()" data-i18n="nav.guests">Invitados</a>
-    <a class="abay-popup-link" href="abay.html" target="_blank" rel="noopener" onclick="closeMobileMenu()" data-i18n="nav.ngo">ONG Abay</a>
+    <a class="abay-modal-link" href="#abay-modal" aria-haspopup="dialog" aria-controls="abay-modal" onclick="closeMobileMenu()" data-i18n="nav.ngo">ONG Abay</a>
     <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav.cta">Asistir</a>
   </div>
 
@@ -59,7 +59,7 @@
     <div class="hero-bg"></div>
     <div class="hero-split">
       <div class="hero-panel">
-        <img src="assets/modelos/maria-jose-ortiz-disenadora-1.jpg" alt="María José Ortiz, diseñadora de moda española" loading="eager" />
+        <img src="assets/modelos/Maria%20Jose%CC%81%20nieve.jpg" alt="María José Ortiz en una sesión de moda en la nieve" loading="eager" />
       </div>
     </div>
     <div class="hero-center">
@@ -157,7 +157,7 @@
         <div class="ethiopia-card reveal reveal-delay-3" tabindex="0" role="button" aria-pressed="false">
           <div class="ethiopia-card-inner">
             <div class="ethiopia-card-face ethiopia-card-front">
-              <img src="assets/gastronomia/enejera3.jpg" alt="Injera etíope" />
+              <img src="assets/gastronomia/enejera2.jpg" alt="Injera etíope" />
               <div class="ethiopia-card-content">
                 <p class="ethiopia-card-tag" data-i18n="eth.card4.tag">Gastronomía</p>
                 <h3 class="ethiopia-card-title" data-i18n="eth.card4.title">La Injera</h3>
@@ -187,7 +187,9 @@
       <div class="designers-grid">
         <div class="designer-card reveal">
           <div class="designer-card-img">
-            <img src="assets/modelos/maria-jose-ortiz-disenadora-1.jpg" alt="María José Ortiz" />
+            <button class="designer-image-button" type="button" aria-label="Ampliar imagen de María José Ortiz">
+              <img src="assets/modelos/maria-jose-ortiz-disenadora-1.jpg" alt="María José Ortiz" />
+            </button>
           </div>
           <div class="designer-card-info">
             <div class="designer-card-name">María José Ortiz</div>
@@ -196,7 +198,9 @@
         </div>
         <div class="designer-card reveal reveal-delay-1">
           <div class="designer-card-img">
-            <img src="assets/modelos/IMG_5478.jpg" alt="Diseñador etíope 1" />
+            <button class="designer-image-button" type="button" aria-label="Ampliar imagen de Tsehaye Mehari">
+              <img src="assets/modelos/IMG_5478.jpg" alt="Diseñador etíope 1" />
+            </button>
           </div>
           <div class="designer-card-info">
             <div class="designer-card-name">Tsehaye Mehari</div>
@@ -205,7 +209,9 @@
         </div>
         <div class="designer-card reveal reveal-delay-2">
           <div class="designer-card-img">
-            <img src="assets/modelos/IMG_5474.jpg" alt="Diseñador etíope 2" />
+            <button class="designer-image-button" type="button" aria-label="Ampliar imagen de Nitsu Arts">
+              <img src="assets/modelos/IMG_5474.jpg" alt="Diseñador etíope 2" />
+            </button>
           </div>
           <div class="designer-card-info">
             <div class="designer-card-name">Nitsu Arts</div>
@@ -213,6 +219,14 @@
           </div>
         </div>
       </div>
+      <dialog class="designer-image-modal" id="designer-image-modal" aria-labelledby="designer-image-modal-caption">
+        <button class="designer-image-modal-close" type="button" aria-label="Cerrar imagen">&times;</button>
+        <figure>
+          <img class="designer-image-modal-photo" src="" alt="" />
+          <figcaption class="designer-image-modal-caption" id="designer-image-modal-caption"></figcaption>
+        </figure>
+        <p class="designer-image-modal-bio" data-i18n="designer.bio.placeholder">Breve biografía próximamente.</p>
+      </dialog>
     </div>
   </section>
 
@@ -373,6 +387,36 @@
       </div>
     </div>
   </section>
+
+  <!-- ABAY MODAL -->
+  <dialog id="abay-modal" aria-labelledby="abay-modal-title">
+    <button class="abay-modal-close" type="button" aria-label="Cerrar">&#215;</button>
+    <section id="ngo">
+      <div class="container">
+        <div class="ngo-grid">
+          <div class="ngo-content">
+            <p class="section-tag" data-i18n="ngo.tag">Acción Social</p>
+            <h2 id="abay-modal-title" class="section-title light" data-i18n="ngo.title">ONG Abay<br><em>Etiopía</em></h2>
+            <p data-i18n="ngo.text1">Este evento intercultural tiene como objetivo dar visibilidad a la ONG Abay Etiopía, reconocida de utilidad pública, y celebrar la unión entre España y Etiopía poniendo en valor los proyectos educativos y de desarrollo que se llevan a cabo en el país.</p>
+            <p data-i18n="ngo.text2">Abay es una ONG española fundada en 2009 que trabaja en Etiopía combatiendo la pobreza mediante proyectos de educación, sanidad y desarrollo comunitario en Walmara y Addis Abeba.</p>
+            <div class="ngo-programs">
+              <span class="ngo-program" data-i18n="ngo.p1">Educación</span>
+              <span class="ngo-program" data-i18n="ngo.p2">Salud</span>
+              <span class="ngo-program" data-i18n="ngo.p3">Desarrollo Comunitario</span>
+            </div>
+            <p class="ngo-website">
+              <a href="https://www.abayetiopia.org" target="_blank" rel="noopener noreferrer">www.abayetiopia.org</a>
+            </p>
+          </div>
+          <div class="ngo-visual">
+            <img src="assets/abay/abay-2987.jpg" alt="Proyecto educativo de Abay Etiopía" />
+            <img src="assets/abay/abay-2694.jpg" alt="Familia beneficiaria de Abay Etiopía" />
+            <img src="assets/abay/abay-2993.jpg" alt="Comunidad infantil de Abay Etiopía" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </dialog>
 
   <!-- PARTNERS -->
   <section id="partners">

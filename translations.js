@@ -8,7 +8,6 @@ const i18n = {
     "nav.gastronomy": "Gastronomía",
     "nav.guests": "Invitados",
     "nav.ngo": "ONG Abay",
-    "popup.close": "Cerrar",
     "nav.cta": "Asistir",
     "hero.eyebrow": "Evento Intercultural · Madrid",
     "hero.label.ethiopia": "Etiopía",
@@ -43,6 +42,7 @@ const i18n = {
     "fashion.text": "Tres diseñadores de renombre presentarán sus colecciones: dos etíopes y una española como madrina, resaltando la colaboración entre ambos países.",
     "designer.role.spain": "Haute Couture · Madrina Española",
     "designer.role.ethiopia": "Couture · Etiopía",
+    "designer.bio.placeholder": "Breve biografía próximamente.",
     "prog.tag": "Programa",
     "prog.title": "Tres días\nextraordinarios",
     "prog.day1.title": "Cocktail Inaugural",
@@ -101,7 +101,6 @@ const i18n = {
     "nav.gastronomy": "Gastronomy",
     "nav.guests": "Guests",
     "nav.ngo": "NGO Abay",
-    "popup.close": "Close",
     "nav.cta": "Attend",
     "hero.eyebrow": "Intercultural Event · Madrid",
     "hero.label.ethiopia": "Ethiopia",
@@ -136,6 +135,7 @@ const i18n = {
     "fashion.text": "Three renowned designers will present their collections: two Ethiopian and one Spanish as godmother, highlighting collaboration between both countries.",
     "designer.role.spain": "Haute Couture · Spanish Godmother",
     "designer.role.ethiopia": "Couture · Ethiopia",
+    "designer.bio.placeholder": "Short biography coming soon.",
     "prog.tag": "Programme",
     "prog.title": "Three\nextraordinary days",
     "prog.day1.title": "Opening Cocktail",
@@ -194,7 +194,6 @@ const i18n = {
     "nav.gastronomy": "Gastronomie",
     "nav.guests": "Invités",
     "nav.ngo": "ONG Abay",
-    "popup.close": "Fermer",
     "nav.cta": "Assister",
     "hero.eyebrow": "Événement Interculturel · Madrid",
     "hero.label.ethiopia": "Éthiopie",
@@ -229,6 +228,7 @@ const i18n = {
     "fashion.text": "Trois créateurs renommés présenteront leurs collections : deux éthiopiens et une espagnole comme marraine.",
     "designer.role.spain": "Haute Couture · Marraine Espagnole",
     "designer.role.ethiopia": "Couture · Éthiopie",
+    "designer.bio.placeholder": "Courte biographie à venir.",
     "prog.tag": "Programme",
     "prog.title": "Trois jours\nextraordinaires",
     "prog.day1.title": "Cocktail d'Ouverture",
@@ -287,7 +287,6 @@ const i18n = {
     "nav.gastronomy": "ምግብ",
     "nav.guests": "እንግዶች",
     "nav.ngo": "አቤ NI",
-    "popup.close": "ዝጋ",
     "nav.cta": "ተሳተፍ",
     "hero.eyebrow": "ባህላዊ ዝግጅት · ማድሪድ",
     "hero.label.ethiopia": "ኢትዮጵያ",
@@ -322,6 +321,7 @@ const i18n = {
     "fashion.text": "ሦስት ታዋቂ ዲዛይነሮች ስብስቦቻቸውን ያቀርባሉ።",
     "designer.role.spain": "ሃይ ኩቱር · የስፔን ጎድማ",
     "designer.role.ethiopia": "ኩቱር · ኢትዮጵያ",
+    "designer.bio.placeholder": "አጭር የሕይወት ታሪክ በቅርቡ ይመጣል።",
     "prog.tag": "ፕሮግራም",
     "prog.title": "ሦስት አስደናቂ ቀናት",
     "prog.day1.title": "መክፈቻ ኮክቴይል",
@@ -388,4 +388,3 @@ function setLang(lang, btn) {
   });
   document.documentElement.lang = lang;
 }
-

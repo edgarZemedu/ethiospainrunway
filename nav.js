@@ -18,34 +18,50 @@ if (hamburgerBtn && mobileMenu) {
   });
 }
 
-document.querySelectorAll('.abay-popup-link').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const popupUrl = new URL(link.href);
-    popupUrl.searchParams.set('lang', document.documentElement.lang);
-    link.href = popupUrl.href;
-
-    const width = Math.min(1100, window.screen.availWidth);
-    const height = Math.min(850, window.screen.availHeight);
-    const left = Math.max(0, Math.round((window.screen.availWidth - width) / 2));
-    const top = Math.max(0, Math.round((window.screen.availHeight - height) / 2));
-    const popup = window.open(
-      popupUrl.href,
-      'abayPopup',
-      `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
-    );
-
-    if (popup) {
+const abayModal = document.getElementById('abay-modal');
+if (abayModal instanceof HTMLDialogElement) {
+  document.querySelectorAll('.abay-modal-link').forEach((link) => {
+    link.addEventListener('click', (event) => {
       event.preventDefault();
-      popup.focus();
-    }
+      closeMobileMenu();
+      abayModal.showModal();
+    });
   });
-});
 
-const popupLanguage = new URLSearchParams(window.location.search).get('lang');
-if (popupLanguage && typeof i18n !== 'undefined' && i18n[popupLanguage]) {
-  const languageButton = [...document.querySelectorAll('[data-lang]')]
-    .find((button) => button.dataset.lang === popupLanguage);
-  if (languageButton) setLang(popupLanguage, languageButton);
+  abayModal.querySelector('.abay-modal-close')?.addEventListener('click', () => {
+    abayModal.close();
+  });
+
+  abayModal.addEventListener('click', (event) => {
+    if (event.target === abayModal) abayModal.close();
+  });
+}
+
+const designerImageModal = document.getElementById('designer-image-modal');
+if (designerImageModal instanceof HTMLDialogElement) {
+  const modalImage = designerImageModal.querySelector('.designer-image-modal-photo');
+  const modalCaption = designerImageModal.querySelector('.designer-image-modal-caption');
+
+  document.querySelectorAll('.designer-image-button').forEach((button) => {
+    button.addEventListener('click', () => {
+      const image = button.querySelector('img');
+      const designerName = button.closest('.designer-card')?.querySelector('.designer-card-name')?.textContent;
+      if (!image || !modalImage || !modalCaption) return;
+
+      modalImage.src = image.currentSrc || image.src;
+      modalImage.alt = image.alt;
+      modalCaption.textContent = designerName || image.alt;
+      designerImageModal.showModal();
+    });
+  });
+
+  designerImageModal.querySelector('.designer-image-modal-close')?.addEventListener('click', () => {
+    designerImageModal.close();
+  });
+
+  designerImageModal.addEventListener('click', (event) => {
+    if (event.target === designerImageModal) designerImageModal.close();
+  });
 }
 
 function closeMobileMenu() {
