@@ -176,6 +176,14 @@ nav.scrolled {
   align-items: flex-end;
   overflow: hidden;
 }
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(13,43,36,0.08) 45%, rgba(13,43,36,0.58) 100%);
+  pointer-events: none;
+}
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -185,7 +193,7 @@ nav.scrolled {
   position: absolute;
   inset: 0;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .hero-panel {
   position: relative;
@@ -195,10 +203,9 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.55;
-  transition: transform 8s ease;
+  object-position: center;
+  opacity: 1;
 }
-.hero-panel:hover img { transform: scale(1.04); }
 .hero-panel-label {
   position: absolute;
   top: 56%;
@@ -232,10 +239,10 @@ nav.scrolled {
   transform: translateX(-50%);
   z-index: 3;
   text-align: center;
-  background: rgba(13,43,36,0.85);
-  border: 1px solid var(--border);
+  background: transparent;
+  border: 0;
   padding: 30px 50px;
-  backdrop-filter: blur(8px);
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55);
 }
 .hero-center-eyebrow {
   font-family: var(--font-body);
@@ -380,6 +387,8 @@ section { padding: 100px 0; }
 }
 .about-visual {
   position: relative;
+  width: 75%;
+  margin-inline: auto;
 }
 .about-img-main {
   width: 100%;
@@ -447,6 +456,8 @@ section { padding: 100px 0; }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
+  width: 75%;
+  margin-inline: auto;
 }
 .ethiopia-card {
   position: relative;
@@ -540,6 +551,8 @@ section { padding: 100px 0; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  width: 75%;
+  margin-inline: auto;
 }
 .designer-card {
   background: transparent;
@@ -792,6 +805,8 @@ section { padding: 100px 0; }
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 4px;
+  width: 75%;
+  margin-inline: auto;
 }
 .gastro-img {
   overflow: hidden;
@@ -960,9 +975,14 @@ section { padding: 100px 0; }
 }
 
 /* ===== PARTNERS ===== */
-#partners {
+#partners,
+#institutional-support,
+#official-collaborators {
   background: #ffffff;
   padding: 70px 0;
+}
+#official-collaborators {
+  padding-top: 0;
 }
 .partners-label {
   text-align: center;
@@ -974,12 +994,38 @@ section { padding: 100px 0; }
   color: var(--gold);
   margin-bottom: 48px;
 }
+.partners-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+.partners-track {
+  display: flex;
+  width: max-content;
+  animation: partners-move-right 35s linear infinite;
+}
 .partners-logos {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
   gap: 44px 64px;
+}
+@keyframes partners-move-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.partners-carousel:hover .partners-track,
+.partners-carousel:focus-within .partners-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    animation: none;
+    transform: none;
+  }
+  .partners-carousel {
+    overflow-x: auto;
+  }
 }
 .partner-logo {
   width: 210px;
