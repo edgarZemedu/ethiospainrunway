@@ -1,6 +1,8 @@
 # Ethio-Spain Runway — Website
+-> [
+](https://ethiospainrunway.com/#about)
 
-Sitio web oficial del **Evento Intercultural Hispano-Etíope · Madrid, Octubre 2026**.
+Sitio web oficial del **Evento Intercultural Hispano-Etíope · Madrid, Marzo 2027**.
 
 ## 📁 Estructura del repositorio
 
