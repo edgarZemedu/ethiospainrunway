@@ -246,21 +246,23 @@ nav.scrolled {
 }
 .hero-center-eyebrow {
   font-family: var(--font-body);
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.35em;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-light);
   margin-bottom: 12px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
 }
 .hero-center-title {
   font-family: var(--font-display);
   font-size: clamp(20px, 3vw, 38px);
-  font-weight: 300;
+  font-weight: 400;
   color: white;
   letter-spacing: 0.1em;
   line-height: 1.2;
   margin-bottom: 6px;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.75);
 }
 .hero-center-title em {
   font-style: italic;
@@ -268,12 +270,13 @@ nav.scrolled {
 }
 .hero-center-sub {
   font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 0.2em;
-  color: rgba(245,240,232,0.7);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: #fff;
   text-transform: uppercase;
   margin-top: 10px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
 }
 .hero-scroll {
   display: flex;
@@ -302,6 +305,7 @@ nav.scrolled {
 
 /* ===== SECTION COMMONS ===== */
 section { padding: 100px 0; }
+section[id]:not(#hero) { scroll-margin-top: 110px; }
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -335,6 +339,11 @@ section { padding: 100px 0; }
 }
 .section-title.light { color: white; }
 .section-title.light em { color: var(--gold-light); }
+#ethiopia .section-title { font-size: clamp(36px, 4.5vw, 64px); }
+#fashion .section-title { font-size: clamp(30px, 3.6vw, 52px); }
+#gastronomy .section-title { font-size: clamp(36px, 4.5vw, 64px); }
+#about .section-title,
+#guests .section-title { font-size: clamp(36px, 4.5vw, 64px); }
 
 /* ===== ABOUT SECTION ===== */
 #about { background: #ffffff; }
@@ -434,19 +443,6 @@ section { padding: 100px 0; }
   background: var(--deep-green);
   position: relative;
   overflow: hidden;
-}
-#ethiopia::before {
-  content: 'ETHIOPIA';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-display);
-  font-size: clamp(80px, 18vw, 260px);
-  font-weight: 300;
-  color: rgba(255,255,255,0.03);
-  white-space: nowrap;
-  pointer-events: none;
 }
 .ethiopia-header {
   text-align: center;
